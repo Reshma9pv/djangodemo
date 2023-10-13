@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+<h2>WELCOME TO HOME</h2>
+{% if user.is_authenticated %}
+{{user.username}}
+{% else %}
+<p>gust</p>
+{% endif %}
+{% endblock %}

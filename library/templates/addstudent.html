@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+<h2>ADD STUDENT</h2>
+
+<form method="POST">
+    {% csrf_token %}
+<div class="mb-3">
+  <label  class="form-label">STUDENT NAME</label>
+  <input type="text"  class="form-control"  name="n" placeholder="enter name">
+</div>
+    <div class="mb-3">
+  <label  class="form-label">STUDENT AGE</label>
+  <input type="NUMBER" class="form-control" name="a" placeholder="enter age">
+</div>
+    <div class="mb-3">
+  <label  class="form-label">PLACE</label>
+  <input type="text" class="form-control" name="p" placeholder="enter place">
+</div>
+    <div class="mb-3">
+
+  <input type="submit" class="form-control">
+</div>
+
+    </form>
+
+{% endblock %}
+
